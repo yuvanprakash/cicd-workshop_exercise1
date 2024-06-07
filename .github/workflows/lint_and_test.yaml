@@ -13,10 +13,11 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.12'
-    - 
-    - working-directory: exercise_2
-      run: ""
-    
-
-  lint:
-    # Complete the lint job configuration
+    - name: Install Dependencies
+      run: | 
+        pip install pytest
+        pip install black
+    - name: run test2
+      working-directory: exercise_2
+      run: 
+        pytest test_bad_code.py
