@@ -22,5 +22,5 @@ jobs:
   deployment:
     strategy:
       matrix:
-        target: [dev, acc, pro]
-    runs-on: ${{ matrix.target }}
+        env: [dev, acc, pro]
+    runs-on: ${{ matrix.env }}
