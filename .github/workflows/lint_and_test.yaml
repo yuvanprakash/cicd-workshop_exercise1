@@ -17,7 +17,12 @@ jobs:
       run: | 
         pip install pytest
         pip install black
+        pip install flake8
     - name: run test2
       working-directory: exercise_2
       run: 
         pytest test_bad_code.py
+    - name: run flake8
+      working-directory: exercise_2
+      run: 
+        pytest flake8   
