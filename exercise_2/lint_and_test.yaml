@@ -1,0 +1,22 @@
+name: Python CI
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Install Dependencies
+      run: | 
+        pip install pytest
+        pip install black
+    - name: run test2
+      run: 
+        pytest test_bad_code.py
