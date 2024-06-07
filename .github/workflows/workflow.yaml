@@ -31,10 +31,9 @@ jobs:
           with:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_PASSWORD }}
-        -
-          name: Build and push
-          working-directory: exercise_3
+        - name: Build and push
           uses: docker/build-push-action@v5
           with:
             push: true
             tags: user/app:latest
+            context: exercise_3
