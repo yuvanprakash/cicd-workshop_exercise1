@@ -23,4 +23,6 @@ jobs:
     strategy:
       matrix:
         env: [dev, acc, pro]
+    steps:
+      - uses: actions/setup-node@v4
     runs-on: ${{ matrix.env }}
