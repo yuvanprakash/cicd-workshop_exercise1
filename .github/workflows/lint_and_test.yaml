@@ -1,0 +1,22 @@
+name: Python CI
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - 
+    - working-directory: exercise_2
+      run: ""
+    
+
+  lint:
+    # Complete the lint job configuration
