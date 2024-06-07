@@ -15,6 +15,7 @@ jobs:
         working-directory: exercise_3
         run: | 
           pip install -r requirements.txt
+          echo '${{ secrets.DOCKERHUB_USERNAME }}'
       
   docker:
       runs-on: ubuntu-latest
